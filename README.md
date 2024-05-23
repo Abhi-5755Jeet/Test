@@ -1,4 +1,5 @@
-# spring-security-boilerplate
+For Documentaion Perspective I have Attched APIDOCS.xlsx file go if you go though this you will get clearity for endpoinds of CRUD operations.
+
 SpringBoot application boilerplate code with Spring Security implementation and JWT authentication and authorization.  
 MySQL is used as a database.
 
@@ -6,7 +7,7 @@ MySQL is used as a database.
 
 First, you need to clone this repository  
 
-```git clone https://github.com/boris-ns/spring-security-boilerplate.git```  
+```git clone : https://github.com/Abhi-5755Jeet/Test.git```  
 
 Then in ```src/main/resources/application.yml``` enter your database name, username and password.  
 
@@ -53,7 +54,7 @@ Response:
 ```
 
 ## Refresh token
-```POST http://localhost:8080/auth/refresh```  
+```POST http://localhost:8888/auth/refresh```  
 Authentication: you must send JWT with request  
 All users are authorized to use this endpoint  
 Response:  
@@ -77,25 +78,8 @@ Request:
 ```
 Response: 200 OK or exception
 
-## Public Hello World
-```GET http://localhost:8080/api/public/hello-world```  
-Everyone is authorized to use this endpoint  
-Response: ```Hello World from PUBLIC controller!```
 
-## Private Hello World for registered users
-```GET http://localhost:8080/api/hello-world/registered-user```  
-Only registered users can use this endpoint  
-Response: ```Hello ANY REGISTERED USER from PRIVATE controller!```  
-
-## Private Hello World for regular users
-```GET http://localhost:8080/api/hello-world/user```  
-Only users with role ```ROLE_USER``` can use this endpoint  
-Response: ```Hello USER from PRIVATE controller!```
-
-## Private Hello World for admins
-```GET http://localhost:8080/api/hello-world/admin```  
-Only users with role ```ROLE_ADMIN``` can use this endpoint  
-Response: ```Hello ADMIN from PRIVATE controller!```
+`
 
 # Predefined data in the database
 In the database, there are two types of users: ```ROLE_ADMIN``` and ```ROLE_USER```.  
