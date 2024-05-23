@@ -49,8 +49,29 @@ public class User implements UserDetails {
     private List<Authority> authorities;
 
 
+    @ManyToOne
+    @JoinColumn(name = "event_id")
+    private EventDetails eventDetails;
+
+
     public Long getId() {
         return id;
+    }
+
+    public User(Long id, String username, String password, String firstName, String lastName, String email, boolean enabled, Timestamp lastPasswordResetDate, List<Authority> authorities) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.enabled = enabled;
+        this.lastPasswordResetDate = lastPasswordResetDate;
+        this.authorities = authorities;
+
+    }
+
+    public User() {
     }
 
     public void setId(Long id) {
@@ -142,4 +163,14 @@ public class User implements UserDetails {
     public boolean isCredentialsNonExpired() {
         return true;
     }
+
+    public EventDetails getEventDetails() {
+        return eventDetails;
+    }
+
+    public void setEventDetails(EventDetails eventDetails) {
+        this.eventDetails = eventDetails;
+    }
+
+
 }
