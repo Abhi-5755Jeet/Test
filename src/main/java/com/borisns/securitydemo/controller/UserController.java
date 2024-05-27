@@ -25,8 +25,6 @@ public class UserController {
 
     @PostMapping("/api/create-user-with-event")
     public void createUserWithEvent(@RequestBody User user) {
-
-
         EventDetails eventDetails= user.getEventDetails();
         user.setEventDetails(eventDetails);
         User createdUser = userService.createUser(user);

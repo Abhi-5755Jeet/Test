@@ -31,6 +31,9 @@ public class UserDTO {
                 .map(authority -> ((Authority) authority).getName()).collect(Collectors.toList());
     }
 
+    public UserDTO() {
+    }
+
     public Long getId() {
         return id;
     }
